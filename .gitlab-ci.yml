@@ -1,0 +1,14 @@
+sages :
+    - clean
+    - compile
+
+clean-project:
+    stage: clean
+    script:
+        - mvn clean
+
+
+compile-project:
+    stage: compile
+    scrpt:
+        -mvn compile
