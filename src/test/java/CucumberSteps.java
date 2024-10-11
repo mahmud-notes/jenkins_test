@@ -23,7 +23,6 @@ public class CucumberSteps {
         inputBtn.sendKeys(location);
         WebElement uploadBtn = webDriver.findElement(By.id("file-submit"));
         uploadBtn.click();
-
         WebElement uploadMsg = webDriver.findElement(By.xpath("//h3[contains(text(),'File Uploaded!')]"));
         successMsg =  uploadMsg.isDisplayed();
     }
@@ -32,4 +31,5 @@ public class CucumberSteps {
     public void checkMessage() {
         Assert.assertTrue(successMsg, "Upload Success Message Did Not Displayed");
     }
+
 }
