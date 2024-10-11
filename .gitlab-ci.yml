@@ -13,4 +13,4 @@ clean-project:
 compile-project:
     stage: compile
     script:
-        -mvn compile
+        - mvn compile
