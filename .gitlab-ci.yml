@@ -1,4 +1,4 @@
-sages :
+stages :
     - clean
     - compile
 
@@ -10,5 +10,5 @@ clean-project:
 
 compile-project:
     stage: compile
-    scrpt:
+    script:
         -mvn compile
