@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.Assert;
 
 public class CucumberSteps {
@@ -13,7 +14,9 @@ public class CucumberSteps {
 
     @Given("Going To Url")
     public void goToUrl(){
-        webDriver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        webDriver = new ChromeDriver(options);
         webDriver.get("https://the-internet.herokuapp.com/upload");
     }
 
