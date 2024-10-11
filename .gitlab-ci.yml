@@ -14,3 +14,4 @@ compile-project:
     stage: compile
     script:
         - mvn compile
+        - mvn -Dtest=RunnerClass test
