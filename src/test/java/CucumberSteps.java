@@ -18,6 +18,7 @@ public class CucumberSteps {
     public void goToUrl(){
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
+        options.addArguments("--no-sandbox");
         webDriver = new ChromeDriver(options);
         webDriver.get("https://the-internet.herokuapp.com/upload");
     }
